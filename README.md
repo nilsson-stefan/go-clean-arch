@@ -17,7 +17,7 @@ Could also be event listeners or other external input.
 Interface adapters that defines the "contract" between the use cases (business logic) and the framework specific code in the outer circle. 
 In this example:
 * **/adapters/controllers/...** specifies how outer circle (rest api/events) communicates with the use cases (business logic)
-* **/adapters/repository/...** specifies how the use cases (business logic) requests data from our persistence layer in the outer circle.
+* **/adapters/repository/...** specifies an interface towards the persistence layer enabling the inner (business logic) to read/write to our database in the outer layer.
 
 ## 3. Red circle
 This is where the business logic is implemented using the core entities found in the inner/yellow circle. This code should be
