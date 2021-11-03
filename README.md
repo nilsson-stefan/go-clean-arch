@@ -1,5 +1,5 @@
 # go-clean-arch
-Attempt to create a Go-project template that to some level fulfills the structure and rules 
+Attempt to create a Go-project template that **that somewhat fulfills** the structure and rules 
 recommended by Uncle Bobs clean architecture: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
 <img src="https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg" alt="drawing" width="400"/>
