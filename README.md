@@ -5,33 +5,33 @@ recommended by Uncle Bobs clean architecture: https://blog.cleancoder.com/uncle-
 <img src="https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg" alt="drawing" width="400"/>
 
 Short description of the circles and where their code are available in this project:
-##1. Blue circle 
+## 1. Blue circle 
 Code that uses frameworks and drivers. In this example:
 * persistence/... using dynamodb driver
 * web/... gorilla mux request router
 
 Could also be event listeners or other external input.
 
-##2. Green circle
+## 2. Green circle
 Interface adapters that defines the "contract" between the use cases (business logic) and the framework specific code in the outer circle. 
 In this example:
 * adapters/controllers/... specifies how outer circle (rest api/events) communicates with the use cases (business logic)
 * adapters/repository/... specifies how the use cases (business logic) communicates with our persistence layer in the outer circle.
 
-##3. Red circle
+## 3. Red circle
 This is where the business logic is implemented using the core entities found in the inner/yellow circle. This code should be
 totally independent of external frameworks and web/db specific models. This is accomplished by following the dependency rule (see below).
 And by doing this you get "a system that is intrinsically testable, with all the benefits that implies. And 
 when any of the external parts of the system become obsolete, like the database, or the web framework, 
 you can replace those obsolete elements with a minimum of fuss."
 
-##4. Yellow circle
+## 4. Yellow circle
 Core enitites used by the business logic.
 
-##The dependency rule
+## The dependency rule
 Source code dependencies must only point inwards
 
-##Configuration
+## Configuration
 The main function in main.go is using the configuration and initialization code in 
 * configuration/...
 
