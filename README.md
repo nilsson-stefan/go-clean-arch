@@ -26,7 +26,7 @@ when any of the external parts of the system become obsolete, like the database,
 you can replace those obsolete elements with a minimum of fuss."
 
 ## 4. Yellow circle
-Core enitites used by the business logic.
+Core entities used by the business logic.
 
 ## The dependency rule
 Source code dependencies must only point inwards
@@ -39,4 +39,10 @@ to instantiate and wire code according to specific config/setup. This can be don
 since this code needs to be able to create types from all circles the configuration code (at least in this example) is an 
 exception from the dependency rule.
 
+## All the data
+While the source code dependencies only should point inwards, the data flows in both directions \
+In: \
+user --> rest request (web) --> adapter (interface) --> core use case --> \
+Out: \
+--> adapter (interface) --> db query (persistence)  
 
