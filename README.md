@@ -1,11 +1,11 @@
 # go-clean-arch
-Attempt to create a Go-project template that **that somewhat fulfills** the structure and rules 
+Attempt to create a Go-project template that **somewhat fulfills** the structure and rules 
 recommended by Uncle Bobs clean architecture: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
 <img src="https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg" alt="drawing" width="400"/>
 
 \
-Short description of the circles and where their code are available in this project:
+Short description of the circles and where their code are located in this project:
 ## 1. Blue circle 
 Code that uses frameworks and drivers. In this example:
 * **/persistence/...** using dynamodb driver
@@ -26,12 +26,12 @@ And by doing this you get *"a system that is intrinsically testable, with all th
 when any of the external parts of the system become obsolete, like the database, or the web framework, 
 you can replace those obsolete elements with a minimum of fuss."*
 
-* **/core/businesslogic/...** this is where the use cases are implpemented
+* **/core/businesslogic/...** this is where the use cases are implemented
 
 ## 4. Yellow circle
 Core entities used by the business logic.
 
-* **/core/entities/...** core entities used by the business logic
+* **/core/entities/...**
 
 ## The dependency rule
 Source code dependencies must only point inwards
