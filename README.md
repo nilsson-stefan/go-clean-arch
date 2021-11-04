@@ -26,8 +26,12 @@ And by doing this you get *"a system that is intrinsically testable, with all th
 when any of the external parts of the system become obsolete, like the database, or the web framework, 
 you can replace those obsolete elements with a minimum of fuss."*
 
+* **/core/businesslogic/...** this is where the use cases are implpemented
+
 ## 4. Yellow circle
 Core entities used by the business logic.
+
+* **/core/entities/...** core entities used by the business logic
 
 ## The dependency rule
 Source code dependencies must only point inwards
@@ -42,8 +46,6 @@ exception from the dependency rule.
 
 ## All the data
 While the source code dependencies only should point inwards, the data flows in both directions \
-In: \
-user --> rest request (web) --> adapter (interface) --> core use case --> \
-Out: \
---> adapter (interface) --> db query (persistence)  
+In: user --> rest request (web) --> adapter (interface) --> core use case --> \
+Out: --> adapter (interface) --> db query (persistence)  
 
