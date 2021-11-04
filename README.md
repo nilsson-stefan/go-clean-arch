@@ -21,7 +21,7 @@ In this example:
 
 ## 3. Red circle
 This is where the business logic is implemented using the core entities found in the inner/yellow circle. This code should be
-totally independent of external frameworks and web/db specific models. This is accomplished by following the dependency rule (see below).
+totally unaware of external frameworks and web/db specific models. This is accomplished by following the dependency rule (see below).
 And by doing this you get *"a system that is intrinsically testable, with all the benefits that implies. And 
 when any of the external parts of the system become obsolete, like the database, or the web framework, 
 you can replace those obsolete elements with a minimum of fuss."*
